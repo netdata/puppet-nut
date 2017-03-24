@@ -53,7 +53,7 @@ class nut::config {
   }
 
   ::concat { "${conf_dir}/ups.conf":
-    owner => 0,
+    owner => '0',
     group => $group,
     mode  => '0640',
     warn  => "# !!! Managed by Puppet !!!\n\n",
