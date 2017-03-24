@@ -60,7 +60,7 @@ class nut::config {
   }
 
   ::concat { "${conf_dir}/upsd.users":
-    owner => 0,
+    owner => '0',
     group => $group,
     mode  => '0640',
     warn  => "# !!! Managed by Puppet !!!\n\n",
@@ -68,7 +68,7 @@ class nut::config {
 
   file { "${conf_dir}/upsd.conf":
     ensure  => file,
-    owner   => 0,
+    owner   => '0',
     group   => $group,
     mode    => '0640',
     content => template("${module_name}/upsd.conf.erb"),
@@ -82,8 +82,8 @@ class nut::config {
 
           file { '/etc/sysconfig/ups':
             ensure  => file,
-            owner   => 0,
-            group   => 0,
+            owner   => '0',
+            group   => '0',
             mode    => '0644',
             content => template("${module_name}/sysconfig.erb"),
           }
@@ -102,7 +102,7 @@ class nut::config {
 
       file { "${conf_dir}/nut.conf":
         ensure  => file,
-        owner   => 0,
+        owner   => '0',
         group   => $group,
         mode    => '0640',
         content => $content,
