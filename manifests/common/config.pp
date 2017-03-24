@@ -17,7 +17,7 @@ class nut::common::config {
   $user        = $::nut::common::user
 
   ::concat { "${conf_dir}/upsmon.conf":
-    owner => 0,
+    owner => '0',
     group => $group,
     mode  => '0640',
     warn  => "# !!! Managed by Puppet !!!\n\n",
@@ -39,7 +39,7 @@ class nut::common::config {
     }
 
     ::concat { "${conf_dir}/upssched.conf":
-      owner => 0,
+      owner => '0',
       group => $group,
       mode  => '0640',
       warn  => "# !!! Managed by Puppet !!!\n\n",
