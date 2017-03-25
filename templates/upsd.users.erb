@@ -2,10 +2,10 @@
 	password = <%= @password %>
 <% if @upsmon -%>
 	upsmon <%= @upsmon %>
-<% else -%>
 <%     @allowfrom.each do |a| -%>
 	allowfrom <%= a %>
 <% end -%>
+<% else -%>
 <%   if @actions -%>
 <%     @actions.each do |a| -%>
 	actions = <%= a %>
