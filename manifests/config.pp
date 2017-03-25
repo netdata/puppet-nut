@@ -13,7 +13,7 @@ class nut::config {
   $statepath   = $::nut::statepath
   $acl         = $::nut::acl
   $accept      = $::nut::accept
-  $reject      = $::nut:reject
+  $reject      = $::nut::reject
   $user        = $::nut::user
 
   case $::osfamily {
