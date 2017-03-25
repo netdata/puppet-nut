@@ -3,7 +3,7 @@
 <% if @upsmon -%>
 	upsmon <%= @upsmon %>
 <%     @allowfrom.each do |a| -%>
-	allowfrom <%= a %>
+	allowfrom = <%= a %>
 <% end -%>
 <% else -%>
 <%   if @actions -%>
