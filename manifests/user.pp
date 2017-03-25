@@ -23,10 +23,11 @@
 # @see puppet_defined_types::nut::ups ::nut::ups
 define nut::user (
   String                            $password,
-  Optional[Array[String, 1]]        $actions  = undef,
-  Optional[Array[String, 1]]        $instcmds = undef,
-  Optional[Enum['master', 'slave']] $upsmon   = undef,
-  String                            $user     = $title,
+  Optional[Array[String, 1]]        $actions   = undef,
+  Optional[Array[String, 1]]        $instcmds  = undef,
+  Optional[Array[String, 1]]        $allowfrom = [],
+  Optional[Enum['master', 'slave']] $upsmon    = undef,
+  String                            $user      = $title,
 ) {
 
   if ! defined(Class['::nut']) {
