@@ -26,3 +26,12 @@ CERTIDENT "<%= @certident[0] %>" "<%= @certident[1] %>"
 <% if @certrequest -%>
 CERTREQUEST <%= @certrequest.upcase %>
 <% end -%>
+<%   @acl.each do |x| -%>
+ACL <%= x %>
+<%   end -%>
+<%   @accept.each do |x| -%>
+ACCEPT <%= x %>
+<%   end -%>
+<%   @reject.each do |x| -%>
+REJECT <%= x %>
+<%   end -%>

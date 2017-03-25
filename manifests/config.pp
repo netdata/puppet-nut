@@ -11,6 +11,9 @@ class nut::config {
   $maxage      = $::nut::maxage
   $maxconn     = $::nut::maxconn
   $statepath   = $::nut::statepath
+  $acl         = $::nut::acl
+  $accept      = $::nut::accept
+  $reject      = $::nut:reject
   $user        = $::nut::user
 
   case $::osfamily {

@@ -102,6 +102,9 @@ class nut (
   String                                           $service_name          = $::nut::params::server_service_name,
   Stdlib::Absolutepath                             $statepath             = $::nut::params::state_dir,
   String                                           $user                  = $::nut::params::user,
+  Optional[Array]                                  $acl                   = [],
+  Optional[Array]                                  $accept                = [],
+  Optional[Array]                                  $reject                = [],
 ) inherits ::nut::params {
 
   contain ::nut::install
