@@ -77,7 +77,7 @@ class nut (
   Optional[Integer[0]]                             $client_hostsync       = undef,
   Boolean                                          $client_manage_package = $::nut::params::client_manage_package,
   Boolean                                          $client_manage_service = $::nut::params::client_manage_service,
-  Integer[1]                                       $client_minsupplies    = 1,
+  Integer                                          $client_minsupplies    = 1,
   Optional[Integer[0]]                             $client_nocommwarntime = undef,
   Boolean                                          $client_use_upssched   = false,
   Optional[Stdlib::Absolutepath]                   $client_notifycmd      = $client_use_upssched ? {
