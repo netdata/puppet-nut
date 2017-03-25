@@ -2,7 +2,7 @@
 class nut::common (
   Stdlib::Absolutepath                             $conf_dir,
   String                                           $group,
-  Integer[1]                                       $minsupplies,
+  Integer                                          $minsupplies,
   String                                           $package_name,
   String                                           $service_name,
   String                                           $shutdowncmd,
